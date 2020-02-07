@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快速通道自动部署 NativeScript 应用程序 | NativeScript-Vue-Examples</title>
+    <meta name="description" content="🍈 NativeScript and Vue code samples.">
+    <meta name="generator" content="VuePress 1.3.0">
+    <link rel="icon" href="/img/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+  <link rel="alternate" type="application/rss+xml" href="https://nativescript-vue-examples.luzhaoyang.com/rss.xml" title="NativeScript-Vue-Examples RSS Feed">
+  <link rel="alternate" type="application/atom+xml" href="https://nativescript-vue-examples.luzhaoyang.com/feed.atom" title="NativeScript-Vue-Examples Atom Feed">
+  <link rel="alternate" type="application/json" href="https://nativescript-vue-examples.luzhaoyang.com/feed.json" title="NativeScript-Vue-Examples JSON Feed">
+    <meta property="article:modified_time" content="Tue Dec 17 2019 15:05:35 GMT+0000 (Coordinated Universal Time)"><meta property="og:site_name" content="NativeScript-Vue-Examples"><meta property="og:title" content="快速通道自动部署 NativeScript 应用程序"><meta property="og:type" content="article"><meta property="og:url" content="/blog/automatic-nativescript-app-deployments-with-fastlane.html"><meta name="twitter:title" content="快速通道自动部署 NativeScript 应用程序"><meta name="twitter:url" content="/blog/automatic-nativescript-app-deployments-with-fastlane.html"><meta name="twitter:card" content="summary_large_image">
+    <link rel="preload" href="/assets/css/0.styles.ffb504cc.css" as="style"><link rel="preload" href="/assets/js/app.d2243eaa.js" as="script"><link rel="preload" href="/assets/js/7.5ce0128c.js" as="script"><link rel="preload" href="/assets/js/20.c61ed7c0.js" as="script"><link rel="preload" href="/assets/js/12.a6b2a896.js" as="script"><link rel="preload" href="/assets/js/3.46699782.js" as="script"><link rel="preload" href="/assets/js/1.c9dccf82.js" as="script"><link rel="preload" href="/assets/js/13.c099488d.js" as="script"><link rel="prefetch" href="/assets/js/10.5c332fc0.js"><link rel="prefetch" href="/assets/js/11.9e09d74e.js"><link rel="prefetch" href="/assets/js/14.3f2d8894.js"><link rel="prefetch" href="/assets/js/15.127b10b4.js"><link rel="prefetch" href="/assets/js/16.52f60d60.js"><link rel="prefetch" href="/assets/js/17.cab82d63.js"><link rel="prefetch" href="/assets/js/18.17a335eb.js"><link rel="prefetch" href="/assets/js/19.93da1820.js"><link rel="prefetch" href="/assets/js/2.acfadc59.js"><link rel="prefetch" href="/assets/js/21.ece46f76.js"><link rel="prefetch" href="/assets/js/22.06ff84da.js"><link rel="prefetch" href="/assets/js/23.f5126b3e.js"><link rel="prefetch" href="/assets/js/24.dd0cb0c0.js"><link rel="prefetch" href="/assets/js/25.edbfc9c5.js"><link rel="prefetch" href="/assets/js/26.42a4f4e6.js"><link rel="prefetch" href="/assets/js/27.ddf2f02a.js"><link rel="prefetch" href="/assets/js/28.709fa9a1.js"><link rel="prefetch" href="/assets/js/29.e5afa56c.js"><link rel="prefetch" href="/assets/js/30.580db640.js"><link rel="prefetch" href="/assets/js/31.a3b7af6c.js"><link rel="prefetch" href="/assets/js/32.df68cbd1.js"><link rel="prefetch" href="/assets/js/33.46d8e768.js"><link rel="prefetch" href="/assets/js/34.efd417f8.js"><link rel="prefetch" href="/assets/js/35.efe5b523.js"><link rel="prefetch" href="/assets/js/36.40445d37.js"><link rel="prefetch" href="/assets/js/37.fe15b166.js"><link rel="prefetch" href="/assets/js/38.9ec6832c.js"><link rel="prefetch" href="/assets/js/39.f18915e6.js"><link rel="prefetch" href="/assets/js/4.bf9032e5.js"><link rel="prefetch" href="/assets/js/40.4ddf2daa.js"><link rel="prefetch" href="/assets/js/41.9b798800.js"><link rel="prefetch" href="/assets/js/42.85f7b82f.js"><link rel="prefetch" href="/assets/js/43.bfd6e4b3.js"><link rel="prefetch" href="/assets/js/44.93e1fc11.js"><link rel="prefetch" href="/assets/js/45.6871f652.js"><link rel="prefetch" href="/assets/js/46.fc2c4efa.js"><link rel="prefetch" href="/assets/js/47.744e3b24.js"><link rel="prefetch" href="/assets/js/48.ef8a504e.js"><link rel="prefetch" href="/assets/js/49.7a2f97b6.js"><link rel="prefetch" href="/assets/js/50.55d461f3.js"><link rel="prefetch" href="/assets/js/51.aca9f5fd.js"><link rel="prefetch" href="/assets/js/52.bac4ab8a.js"><link rel="prefetch" href="/assets/js/53.587a7f29.js"><link rel="prefetch" href="/assets/js/54.499056a1.js"><link rel="prefetch" href="/assets/js/55.7b65804d.js"><link rel="prefetch" href="/assets/js/56.6f011bd0.js"><link rel="prefetch" href="/assets/js/57.e286d6ee.js"><link rel="prefetch" href="/assets/js/58.578e7e69.js"><link rel="prefetch" href="/assets/js/59.14063555.js"><link rel="prefetch" href="/assets/js/60.345279e1.js"><link rel="prefetch" href="/assets/js/61.6b051706.js"><link rel="prefetch" href="/assets/js/62.daa04753.js"><link rel="prefetch" href="/assets/js/63.ad951f3d.js"><link rel="prefetch" href="/assets/js/64.04b33609.js"><link rel="prefetch" href="/assets/js/65.ff25f42e.js"><link rel="prefetch" href="/assets/js/66.bedd84a9.js"><link rel="prefetch" href="/assets/js/67.288d74c2.js"><link rel="prefetch" href="/assets/js/68.faf46580.js"><link rel="prefetch" href="/assets/js/69.a8880db0.js"><link rel="prefetch" href="/assets/js/70.b4eac6b9.js"><link rel="prefetch" href="/assets/js/71.e4286075.js"><link rel="prefetch" href="/assets/js/72.7bd8a4bb.js"><link rel="prefetch" href="/assets/js/73.d7321f93.js"><link rel="prefetch" href="/assets/js/74.4d061fe3.js"><link rel="prefetch" href="/assets/js/75.4f9b6d2d.js"><link rel="prefetch" href="/assets/js/76.b03f871f.js"><link rel="prefetch" href="/assets/js/77.e4388378.js"><link rel="prefetch" href="/assets/js/78.ec81b42e.js"><link rel="prefetch" href="/assets/js/79.89348746.js"><link rel="prefetch" href="/assets/js/8.688e025e.js"><link rel="prefetch" href="/assets/js/80.424e1d7c.js"><link rel="prefetch" href="/assets/js/81.89df361d.js"><link rel="prefetch" href="/assets/js/82.a5f660f9.js"><link rel="prefetch" href="/assets/js/83.658f20ba.js"><link rel="prefetch" href="/assets/js/84.43d61508.js"><link rel="prefetch" href="/assets/js/85.09243455.js"><link rel="prefetch" href="/assets/js/86.c9643910.js"><link rel="prefetch" href="/assets/js/87.52062a32.js"><link rel="prefetch" href="/assets/js/88.e50773c3.js"><link rel="prefetch" href="/assets/js/89.3b3b99bb.js"><link rel="prefetch" href="/assets/js/9.fced964f.js"><link rel="prefetch" href="/assets/js/90.43d78a2a.js"><link rel="prefetch" href="/assets/js/91.51154ca8.js"><link rel="prefetch" href="/assets/js/92.51b32238.js"><link rel="prefetch" href="/assets/js/93.799aa274.js"><link rel="prefetch" href="/assets/js/94.e197194d.js"><link rel="prefetch" href="/assets/js/95.ccd46102.js"><link rel="prefetch" href="/assets/js/96.62cf534d.js"><link rel="prefetch" href="/assets/js/97.a5314fbc.js"><link rel="prefetch" href="/assets/js/98.913e6e8b.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e31874a1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ffb504cc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">NativeScript-Vue-Examples</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/cn/getting-started/1-quick-start.html" class="nav-link">
+  教程
+</a></div><div class="nav-item"><a href="/blog/detecting-shakes-in-nativescript.html" class="nav-link">
+  博文
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.nativescriptthemebuilder.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  nativescript theme builder
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.nslayouts.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  learn nativescript layouts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://play.nativescript.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  playground
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          本机工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://pan.baidu.com/s/1SZb6PG_6V3QUNlinGr7TcA" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  tools download
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="/tools/nativescript-vue-extend.html" class="nav-link">
+  nativescript-vue-extend
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="友链" class="dropdown-title"><span class="title">友链</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/nuochong/nativescript-vue-examples" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  nativescript-vue-examples
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nativescript-vue.org/cn/docs/introduction/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  nativescript-vue.org
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/nuochong/nativescript-vue-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/cn/getting-started/1-quick-start.html" class="nav-link">
+  教程
+</a></div><div class="nav-item"><a href="/blog/detecting-shakes-in-nativescript.html" class="nav-link">
+  博文
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.nativescriptthemebuilder.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  nativescript theme builder
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.nslayouts.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  learn nativescript layouts
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://play.nativescript.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  playground
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>
+          本机工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://pan.baidu.com/s/1SZb6PG_6V3QUNlinGr7TcA" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  tools download
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="/tools/nativescript-vue-extend.html" class="nav-link">
+  nativescript-vue-extend
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="友链" class="dropdown-title"><span class="title">友链</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/nuochong/nativescript-vue-examples" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  nativescript-vue-examples
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nativescript-vue.org/cn/docs/introduction/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  nativescript-vue.org
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/nuochong/nativescript-vue-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>博客</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/detecting-shakes-in-nativescript.html" class="sidebar-link">在 NativeScript 中检测震动</a></li><li><a href="/blog/whats-new-with-nativescript-dev-appium.html" class="sidebar-link">nativescript-dev-appium 有什么新功能？</a></li><li><a href="/blog/language-detection-with-nativescript-and-azure-cognitive-services.html" class="sidebar-link">使用 NativeScript 和 Azure 认知服务进行语言检测</a></li><li><a href="/blog/automatic-nativescript-app-deployments-with-fastlane.html" class="active sidebar-link">快速通道自动部署 NativeScript 应用程序</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/tabs-and-bottomnavigation-nativescripts-two-new-components.html" class="sidebar-link">选项卡和 BottomNavigation-NativeScript 的两个新组件</a></li><li><a href="/blog/getting-your-route-on-with-nativescript-vue-episode-one.html" class="sidebar-link">使用 NativeScript-Vue 入门：第一集</a></li><li><a href="/blog/getting-your-route-on-with-nativescript-vue-episode-two.html" class="sidebar-link">使用 NativeScript-Vue 入门：第二集</a></li><li><a href="/blog/tips-for-vue-developers-picking-up-nativescript.html" class="sidebar-link">Vue 开发人员选择 NativeScript 的技巧</a></li><li><a href="/blog/working-with-vuex-in-your-nativescript-vue-application-now-with-cats.html" class="sidebar-link">在 NativeScript-Vue 应用程序中使用 Vuex-现在使用 Cats！</a></li><li><a href="/blog/working-with-vuex-in-your-nativescript-vue-application.html" class="sidebar-link">在 NativeScript-Vue 应用程序中使用 Vuex</a></li><li><a href="/blog/building-responsive-apps-with-nativescript.html" class="sidebar-link">使用 NativeScript 构建响应式应用程序</a></li><li><a href="/blog/client-side-storage-in-nativescript-applications.html" class="sidebar-link">NativeScript 应用程序中的客户端存储</a></li><li><a href="/blog/dependency-versions-in-nativescript-playground.html" class="sidebar-link">NativeScript Playground 中的依赖项版本</a></li><li><a href="/blog/migrating-nativescript-plugins-to-androidx.html" class="sidebar-link">将 NativeScript 插件迁移到 AndroidX</a></li><li><a href="/blog/offloading-tasks-to-worker-threads-with-nativescript.html" class="sidebar-link">使用 NativeScript 将任务卸载到辅助线程</a></li><li><a href="/blog/how-to-convince-management-to-use-nativescript-for-mobile-app-development.html" class="sidebar-link">如何说服管理层使用 NativeScript 进行移动应用开发</a></li><li><a href="/blog/migrating-cli-hooks-to-nativescript-6.0.html" class="sidebar-link">将 CLI 挂钩迁移到 NativeScript 6.0</a></li><li><a href="/blog/nativescript-6.0-application-migration.html" class="sidebar-link">迁移到 NativeScript 6.0</a></li><li><a href="/blog/the-new-ios-runtime-powered-by-v8.html" class="sidebar-link">由 V8 提供支持的新 iOS 运行时</a></li><li><a href="/blog/updates-in-the-nativescript-cli-6.0-bundle-workflow-webpack-only-and-hmr-by-default.html" class="sidebar-link">NativeScript CLI 6.0 中的更新：默认情况下捆绑工作流，仅 Webpack 和 HMR</a></li><li><a href="/blog/nativescript-now-supports-angular-8.html" class="sidebar-link">NativeScript 现在支持 Angular 8</a></li><li><a href="/blog/listview-radlistview-and-repeater-why-do-i-need-three.html" class="sidebar-link">ListView，RadListView 和 Repeater-为什么需要三个？</a></li><li><a href="/blog/what-the-apple-supreme-court-decision-means-for-developers.html" class="sidebar-link">苹果最高法院的判决对开发商意味着什么</a></li><li><a href="/blog/managing-component-state-in-nativescript-listview.html" class="sidebar-link">在 NativeScript ListView 中管理组件状态</a></li><li><a href="/blog/adding-objective-c-code-to-a-nativescript-app.html" class="sidebar-link">将 Objective-C 代码添加到 NativeScript 应用程序</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="快速通道自动部署-nativescript-应用程序"><a href="#快速通道自动部署-nativescript-应用程序" class="header-anchor">#</a> 快速通道自动部署 NativeScript 应用程序</h3> <div class="meta wrapper"><div class="date-container"><span class="date">
+    </span></div> · <span class="reading-time" data-v-ea2f7eb8>
+</span></div> <p>如果我不得不指出 NativeScript 开发人员原本令人兴奋的生活中最不愉快的一项任务，我会说：部署！哦，我怎么看不起他们…</p> <p>从 Apple 的配置文件简介到日新月异的 Google Play 控制台，部署应用程序总是让人感到无聊，麻烦，并且可能浪费时间来为出色的应用程序开发出色的功能。在项目的整个生命周期中，一个应用程序可以在测试版本，测试版，错误修复和新功能之间部署数十次（如果不是数百次！）。如果有一种方法可以使部署自动进行，这样我们就可以在需要时将最新版本的应用程序交付我们的队友和用户，这不是很好吗？好吧…感谢 fastlane。</p> <p>fastlane 是一种工具，可以自动执行 iOS 和 Android 应用程序的部署和发布。通过正确的配置，它可以用于自动化 NativeScript 部署。正如您从本文的长度可以看到的那样，设置它并非易事…但是，如果您的项目持续时间足够长，则可以节省大量时间。</p> <p>我们将逐步介绍配置 fastlane 所需的步骤，并解释每个步骤，以便您了解如何针对项目进行调整。本文是经过数小时实验的结果，直到我达到了对我的项目有意义的配置，并且对在开发团队中管理机密性的关注程度很高。同样，请随时根据您的项目和组织进行调整。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>免责声明：在本文中，我们将假定您已经为 iOS 和 Android 确定了部署。我们没有展示如何部署应用程序，而是展示了如何自动化这些部署。</p></div> <p>作为一个例子，我们将创建一个 FASTLANE 配置称为 HubbyChef 一个示范项目。</p> <h4 id="入门-fastlane"><a href="#入门-fastlane" class="header-anchor">#</a> 入门 FASTLANE</h4> <p>我们将从安装 fastlane 开始，可以使用以下命令完成该操作：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>brew cask <span class="token function">install</span> fastlane
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>有关更多安装选项和故障排除的信息，请参阅 fastlane 文档。</p></div> <p>我们无法使用 fastlane 命令 fastlane init 来开始使用，因为 NativeScript 项目文件夹结构与“常规”本机应用程序不同。相反，我们将手动创建和编辑配置文件。</p> <h4 id="快速档案（fastlane-fastfile）"><a href="#快速档案（fastlane-fastfile）" class="header-anchor">#</a> 快速档案（fastlane/Fastfile）</h4> <p>创建文件夹<code>fastlane/</code>和其中的文件<code>Fastfile</code>。</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">mkdir</span> fastlane
+<span class="token function">touch</span> fastlane/Fastfile
+</code></pre></div><p>该<code>Fastfile</code>是主 FASTLANE 配置文件。这是我们添加车道的地方。您可以将泳道视为一组任务。车道包括动作和其他车道。您也可以在平台下对车道进行分组。</p> <p>让我们看看如何通过为我们的顶部结构创建所有东西<code>Fastfile</code>：</p> <div class="language- extra-class"><pre class="language-text"><code>fastlane_version '2.131.0'
+desc 'test lane'
+lane :test do
+  print &quot;TEST SUCCESSFUL!&quot;
+end
+platform :ios do
+ desc 'Fetch certificates and provisioning profiles'
+ lane :certificates do
+ end
+ desc 'Build the iOS application.'
+ lane :build do
+ end
+ desc 'Ship to Testflight.'
+ lane :beta do
+ end
+end
+platform :android do
+ desc 'Build the Android application.'
+ lane :build do
+ end
+ desc 'Ship to Playstore Alpha track.'
+ lane :alpha do
+ end
+end
+</code></pre></div><p>第一行（<code>fastlane_version '&lt;x&gt;'</code>）将确保您的队友没有使用过时的快车道版本。然后，我们创建了一个测试车道 test，只是为了查看 fastlane 是否正常工作。您可以使用命令进行测试<code>fastlane test</code>。结果应该<code>TEST SUCCESSFUL!</code>在控制台中打印出来。</p> <p>然后，我们添加了两个平台：<code>ios</code>和<code>android</code>。对于 ios 平台，我们将有车道 <code>certificates</code>，<code>build</code>和<code>beta</code>。对于<code>android</code>，车道 <code>build</code>和<code>alpha</code>。<code>desc</code>每个通道上方的 s 描述了它们将要执行的操作。稍后我们将调用这些通道有<code>fastlane &lt;platform&gt; &lt;lane&gt;</code>，例如<code>fastlane ios build</code>。</p> <p>运行<code>fastlane lanes</code>将显示所有可用车道的摘要：</p> <p>快车道结果</p> <p>fastlane_lanes.png</p> <h4 id="应用档案（-fastlane-appfile）"><a href="#应用档案（-fastlane-appfile）" class="header-anchor">#</a> 应用档案（./fastlane/Appfile）</h4> <p>创建<code>Appfile</code>内部<code>fastlane</code>文件夹。该文件将存储有关该应用程序的信息，如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>app_identifier &quot;dev.tiagoalves.hubbychef&quot;
+apple_id &quot;tralves@tiagoalves.dev&quot;
+team_id &quot;xxxxxxxxx&quot;
+</code></pre></div><h4 id="env-default（-env-default）"><a href="#env-default（-env-default）" class="header-anchor">#</a> .env.default（./.env.default）</h4> <p>将密码和 API 密钥之类的机密直接存储在 fastlane 配置文件中是不安全的，因为这些文件是项目的一部分，应将其与代码一起推送到版本控制中。相反，我们将使用 dotenv 所有敏感信息并将其存储在<code>.env.default</code>文件中。只是不要忘记<code>.gitignore</code>它。</p> <p>该文件包含一组键值条目，例如：</p> <div class="language- extra-class"><pre class="language-text"><code>MATCH_PASSWORD=&quot;xxxxxxxxx&quot;
+</code></pre></div><p>我们可以在<code>Fastfilewith</code>中使用此值<code>ENV[&quot;MATCH_PASSWORD&quot;]</code>，但有时动作只会在后台使用这些值。</p> <h4 id="的-ios"><a href="#的-ios" class="header-anchor">#</a> 的 iOS</h4> <p>现在，我们将从最难的部分开始构建 iOS 配置：代码签名。</p> <h4 id="代码签名"><a href="#代码签名" class="header-anchor">#</a> 代码签名</h4> <p>请允许我继续并推荐该 match 方法。您可以在此处阅读有关此概念的所有信息，但总而言之，这 match 将为您提供帮助：</p> <ul><li>自动生成必要的证书和配置文件（无需访问 Apple 开发者帐户页面）；</li> <li>将证书和配置文件存储在存储库（Git 或 Google 云存储）中。所有文件都将被加密作为附加的安全层；</li> <li>易于设置，以在新计算机中部署或为新团队成员服务。<code>match</code>将负责在构建过程中安装所有内容；</li> <li>与<code>fastlane</code>构建集成；</li></ul> <p>您可以<code>match</code>在官方文档中阅读所有内容。在这里，我们将展示使其工作的基本步骤。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>提示：该<code>match</code>文档建议创建“一个新的共享 Apple Developer Portal 帐户，类似 <a href="mailto:office@company.com">office@company.com</a>”。这将使整个团队之间的共享访问变得更加容易。</p></div> <h5 id="_1）安装-match"><a href="#_1）安装-match" class="header-anchor">#</a> 1）安装 match</h5> <p>运行命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>fastlane match init
+</code></pre></div><p>此命令将询问有关证书和配置文件的存储方法。我建议使用 GIT 并为证书创建一个新的私有存储库（例如<code>https://github.com/tralves/hubbychef-certs</code>）。该命令将创建文件<code>fastlane/Matchfile</code>。</p> <h5 id="_2）配置-match"><a href="#_2）配置-match" class="header-anchor">#</a> 2）配置 match</h5> <p><code>fastlane/Matchfile</code>使用项目和 Apple 帐户信息编辑文件。这是我的<code>Matchfile</code>样子：</p> <div class="language- extra-class"><pre class="language-text"><code>git_url(&quot;https://github.com/tralves/hubbychef-certs&quot;)
+storage_mode(&quot;git&quot;)
+type(&quot;development&quot;) # The default type
+app_identifier(&quot;dev.tiagoalves.hubbychef&quot;)
+username(&quot;tralves@tiagoalves.dev&quot;) # Your Apple Developer Portal username
+team_id('xxxxxxxxxx')
+team_name('Tiago Alves')
+</code></pre></div><p>将存储库加密密码添加到，<code>.env.default</code>这样您就不必在每次部署时都提供该密码。</p> <div class="language- extra-class"><pre class="language-text"><code>MATCH_PASSWORD=&quot;xxxxxxxxx&quot;
+</code></pre></div><h5 id="_3）生成证书和配置文件"><a href="#_3）生成证书和配置文件" class="header-anchor">#</a> 3）生成证书和配置文件</h5> <p>现在，您可以使用生成新的证书和配置文件<code>match</code>。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>提示：在执行此步骤之前，请确保在计算机的“钥匙串访问”中删除该帐户的所有 Apple Developer 证书。<code>match</code>将创建并安装可能与现有证书冲突的新证书。</p></div> <p>为此，请运行：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>match development
+match appstore
+</code></pre></div><p>这将创建开发和分发证书及其各自的配置文件。它还会将它们安装在您的计算机上。如果一切顺利，您现在可以在 Xcode 中打开项目并使用新的配置文件。您还可以看到在先前创建的 GIT 存储库中提交的这些文件。像魔术！</p> <h5 id="_4）配置-certificates-车道"><a href="#_4）配置-certificates-车道" class="header-anchor">#</a> 4）配置 certificates 车道</h5> <p>现在，您可以配置<code>certificates</code> 的车道在<code>Fastfile</code>：</p> <div class="language- extra-class"><pre class="language-text"><code>desc 'Fetch certificates and provisioning profiles'
+lane :certificates do
+    match(type: 'development')
+    match(type: &quot;appstore&quot;)
+    # match(type: &quot;adhoc&quot;)
+end
+</code></pre></div><p>通过此通道，您可以使用安装所有证书<code>fastlane ios certificates</code>。</p> <h5 id="建立步骤"><a href="#建立步骤" class="header-anchor">#</a> 建立步骤</h5> <p>有了所有证书和配置文件后，我们现在可以进行构建步骤了。在这里，我们将创建一个<code>.ipa</code>带有分发配置文件的签名，然后可以将其分发到 Testflight 或 App Store。这是我的<code>ios build</code> 车道的样子：</p> <div class="language- extra-class"><pre class="language-text"><code>desc 'Build the iOS application.'
+lane :build do
+    sh(&quot;tns&quot;, &quot;prepare&quot;, &quot;ios&quot;, &quot;--release&quot;, &quot;--clean&quot;, &quot;--env.production&quot;)
+    match(type: &quot;appstore&quot;)
+    build_app(
+      scheme: &quot;HubbyChef&quot;,
+      workspace: './platforms/ios/HubbyChef.xcworkspace',
+      export_method: &quot;app-store&quot;
+    )
+end
+</code></pre></div><p>此通道中的第一个操作运行命令<code>tns prepare ios --release --clean --env.production</code>，这是我们将在手动部署中键入的命令。</p> <p>第二个操作，<code>match(type: &quot;appstore&quot;)</code>确保已安装分发证书和配置文件，并将它们设置为在下一个操作中使用。</p> <p>最后，该 build_app 动作会编译并签名<code>.ipa</code>。注意操作中的参数：</p> <ul><li><code>scheme</code>：在 Xcode 顶部栏中显示的构建方案，通常是应用程序的名称： Xcode 方案</li> <li><code>workspace</code>：项目.xcworkspace 文件的路径；</li> <li><code>export_method</code>：导出存档的方法。在这种情况下，我们要<code>app-store</code>。<br>
+至此，我们可以<code>.ipa</code>使用以下命令生成签名：</li></ul> <p><code>fastlane ios build</code><br>
+如果一切顺利，您应该<code>.ipa</code>在项目的根文件夹中看到。</p> <h5 id="运送到-testflight"><a href="#运送到-testflight" class="header-anchor">#</a> 运送到 Testflight</h5> <p>最后一步是将其运送<code>.ipa</code>到 Testflight。看看<code>ios beta</code> 车道：</p> <div class="language- extra-class"><pre class="language-text"><code>desc 'Ship to Testflight.'
+lane :beta do
+    build
+    changelog_from_git_commits
+    upload_to_testflight(
+      beta_app_feedback_email: &quot;tralves@tiagoalves.dev&quot;,
+      beta_app_description: &quot;App for Hubbies trying to learn how to cook.&quot;,
+      demo_account_required: false,
+      distribute_external: true,
+      groups: [&quot;beta testers&quot;],
+      notify_external_testers: true,
+      beta_app_review_info: {
+        contact_email: &quot;tralves@tiagoalves.dev&quot;,
+        contact_first_name: &quot;Tiago&quot;,
+        contact_last_name: &quot;Alves&quot;,
+        contact_phone: &quot;+351 9xxxxxxxx&quot;,
+        demo_account_name: &quot;&quot;,
+        demo_account_password: &quot;&quot;,
+        notes: &quot;&lt;3 Thank you for reviewing!&quot;
+      },
+    )
+end
+</code></pre></div><p>该车道通过调用启动<code>build</code> 车道我们前面，所以我们总是有新鲜内置的应用程序发送给 Testflight 定义。</p> <p>然后，我喜欢使用该动作 changelog_from_git_commits。默认情况下，此操作将捕获自上一个 GIT 标签以来的所有提交消息，并将它们用作将应用程序提交到 Testflight 时将使用的更改日志。这样，您的 Beta 测试人员将知道每个版本中的新增功能，并且您无需为此做任何事情（除非编写适当的提交消息…）。</p> <ol><li>上传到 testflight 的最后一个操作将是：</li> <li>将其上传.ipa 到 App Store Connect；</li> <li>将构建添加到 Testflight；</li> <li>分配给所需的测试组（在这种情况下，为“ beta 测试人员”组）；</li> <li>提交应用以供审核；</li></ol> <p>如果您曾经手动执行此过程，则将使用表单域标识此操作中的参数，否则必须一遍又一遍地填写。使用此配置，您要做的就是：</p> <div class="language- extra-class"><pre class="language-text"><code>fastlane ios beta
+</code></pre></div><p>您也可以使用 Fastlane 通过操作将应用程序提交到 App Store <code>upload_to_app_store</code>。您可以在这里阅读所有内容。我不会在本教程中创建该泳道，因为这不是我自己尝试的事情，因为我对此步骤拥有更多控制权。但是，它应该与 using 非常相似<code>upload_to_testflight</code>。</p> <h4 id="安卓系统"><a href="#安卓系统" class="header-anchor">#</a> 安卓系统</h4> <p>我们只有一半了！是时候创建 fastlane Android 配置了。</p> <h4 id="代码签名-2"><a href="#代码签名-2" class="header-anchor">#</a> 代码签名</h4> <p>您可能已经<code>.keystore</code>为您的项目准备了文件。如果没有，请参见此处如何创建一个。</p> <p>我们将密钥库放入其中<code>certs/hubby-chef-prod.keystore</code>，并将其秘密添加到<code>.env.default</code>：</p> <div class="language- extra-class"><pre class="language-text"><code>KEYSTORE_PASSWORD=&quot;xxxxxxxxxxxxx&quot;
+KEYSTORE_ALIAS=&quot;dist&quot;
+KEYSTORE_ALIAS_PASSWORD=&quot;xxxxxxxxxx&quot;
+</code></pre></div><h4 id="建立步骤-2"><a href="#建立步骤-2" class="header-anchor">#</a> 建立步骤</h4> <p>要构建 Android 应用，需要运行该命令的通道 tns 来创建签名的生产版本：</p> <div class="language- extra-class"><pre class="language-text"><code>desc 'Build the Android application.'
+  lane :build do
+    sh(&quot;tns&quot;, &quot;build&quot;, &quot;android&quot;, &quot;--release&quot;, &quot;--clean&quot;, &quot;--env.production&quot;,
+        &quot;--key-store-path&quot;, &quot;../certs/hubby-chef-prod.keystore&quot;,
+        &quot;--key-store-password&quot;, ENV[&quot;KEYSTORE_PASSWORD&quot;],
+        &quot;--key-store-alias&quot;, ENV[&quot;KEYSTORE_ALIAS&quot;],
+        &quot;--key-store-alias-password&quot;, ENV[&quot;KEYSTORE_ALIAS_PASSWORD&quot;]
+      )
+end
+</code></pre></div><p>我们完成了！现在<code>fastlane android build</code>，您可以运行，最后，您应该看到<code>app-release.apk</code>下方<code>platforms/android/app/build/outputs/apk/release/</code>。</p> <h4 id="运送至-play-商店-alpha-音轨"><a href="#运送至-play-商店-alpha-音轨" class="header-anchor">#</a> 运送至 Play 商店 Alpha 音轨</h4> <p>我们需要设置一个 Google Developers Service 帐户。为此，请按照以下步骤操作（或查看 fastlane 文档）：</p> <ul><li>打开 Goog​​le Play 控制台；</li> <li>单击“设置”菜单项，然后单击“ API 访问”；</li> <li>点击“创建服务帐户”按钮；</li> <li>点击对话框中的“ Google Developers Console”链接，这将打开一个新的标签/窗口：</li> <li>点击 Google Developers Console 顶部的“创建服务帐户”按钮；</li> <li>提供服务帐户名称（例如<code>hubbychef-manager</code>）；</li> <li>点击“创建”；</li> <li>单击“选择角色”，然后选择“服务帐户”&gt;“服务帐户用户”；</li> <li>点击“继续”；</li> <li>点击“创建密钥”；</li> <li>选中“提供新的私钥”复选框；</li> <li>确保选择“ JSON”作为“密钥类型”；</li> <li>JSON 文件将被下载；</li> <li>单击“授予访问权限”以获取新添加的服务帐户；</li> <li>从“角色”下拉菜单中选择“发布管理器”（或“项目负责人”）；</li> <li>点击“添加用户”关闭对话框；</li></ul> <p>然后，将 JSON 文件内容复制到<code>.env.default</code>，如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>PLAYSTORE_JSON_KEY_DATA='
+{
+  &quot;type&quot;: &quot;service_account&quot;,
+  &quot;project_id&quot;: &quot;api-642090...&quot;,
+  &quot;private_key_id&quot;: &quot;11d039fd....&quot;,
+  &quot;private_key&quot;: &quot;-----BEGIN PRIVATE KEY-----\nMI...&quot;,
+  &quot;client_email&quot;: &quot;hubbychef-manager@api-6420905...&quot;,
+  &quot;client_id&quot;: &quot;114219...&quot;,
+  &quot;auth_uri&quot;: &quot;https://accounts.google.com/o/oauth2/auth&quot;,
+  &quot;token_uri&quot;: &quot;https://oauth2.googleapis.com/token&quot;,
+  &quot;auth_provider_x509_cert_url&quot;: &quot;https://www.googleapis...&quot;,
+  &quot;client_x509_cert_url&quot;: &quot;https://www.googleapis.com/...&quot;
+}
+</code></pre></div><p>现在，我们可以在中创建车道<code>Fastfile</code>：</p> <div class="language- extra-class"><pre class="language-text"><code>desc 'Ship to Playstore Alpha.'
+  lane :alpha do
+    build
+    changelog_from_git_commits
+    upload_to_play_store(
+      track: 'alpha',
+      track_promote_to: 'alpha',
+      json_key_data: ENV[&quot;PLAYSTORE_JSON_KEY_DATA&quot;],
+      apk: './platforms/android/app/build/outputs/apk/release/app-release.apk'
+    )
+end
+</code></pre></div><p>就像我们在 iOS 上所做的一样，我们从调用<code>build</code> lane 开始。同样，我们将使用<code>changelog_from_git_commits</code>生成变更日志。</p> <p>然后将构建版本发送给动作<code>upload_to_play_store</code>。在这里，我们将构建发送到“ Alpha”轨道，但是您可以将其发送到 Beta 或 Production。查看 upload_to_play_store 的文档以了解更多详细信息。</p> <h4 id="工作流程"><a href="#工作流程" class="header-anchor">#</a> 工作流程</h4> <p>请允许我用 fastlane 添加有关我的部署工作流的另一条注释。这些是我部署新版本的步骤：</p> <h5 id="_1）增加中的版本package-json。"><a href="#_1）增加中的版本package-json。" class="header-anchor">#</a> 1）增加中的版本<code>package.json</code>。</h5> <p>但是，增加版本存在问题：即使您只是部署到 Testflight，Apple 也会花数小时甚至数天的时间审查您的应用程序。我的替代方法是使用此 NativeScript 插件，该插件可让您在中添加<code>versionNumber</code>参数<code>package.json</code>。该编号将是 iOS 上的内部版本号。如果仅增加此值，则将立即批准您的应用进行测试。该插件还可以确保您<code>versionCode</code>在 Android 上获得增量。</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>警告：fastlane 操作 increment_build_number 不适用于 NativeScript 应用程序的生成流程。</p></div> <h5 id="_2）运行-fastlane-命令："><a href="#_2）运行-fastlane-命令：" class="header-anchor">#</a> 2）运行 fastlane 命令：</h5> <div class="language- extra-class"><pre class="language-text"><code>fastlane ios beta
+fastlane android alpha
+</code></pre></div><h5 id="_3）创建一个-git-标签"><a href="#_3）创建一个-git-标签" class="header-anchor">#</a> 3）创建一个 git 标签</h5> <p>这样可以确保该操作<code>changelog_from_git_commits</code>仅在下次部署时捕获正确的提交。</p> <h4 id="总而言之…"><a href="#总而言之…" class="header-anchor">#</a> 总而言之…</h4> <p>fastlane 是一个很棒的工具！在本文中，我们只是简单介绍了 fastlane 可以为您做什么。如果您想要附加到构建过程中，则可能需要采取一些措施。我说的是诸如集成自动测试，拍摄屏幕截图，bot /报告松弛，各种 CI 集成等内容。</p> <p>我知道所有这些工作看起来都很艰巨，但这只是我弄清楚这个问题的时间的一小部分！这肯定会节省您的时间和耐心。部署将是一件轻而易举的事……您最终将需要更频繁地进行部署，从而使您的用户，队友，质量检查人员和老板更加快乐。请享用！</p> <!----></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/nuochong/nativescript-vue-docs/edit/master/docs/blog/automatic-nativescript-app-deployments-with-fastlane.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">12/17/2019, 3:05:35 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/language-detection-with-nativescript-and-azure-cognitive-services.html" class="prev">
+        使用 NativeScript 和 Azure 认知服务进行语言检测
+      </a></span> <span class="next"><a href="/blog/tabs-and-bottomnavigation-nativescripts-two-new-components.html">
+        选项卡和 BottomNavigation-NativeScript 的两个新组件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.d2243eaa.js" defer></script><script src="/assets/js/7.5ce0128c.js" defer></script><script src="/assets/js/20.c61ed7c0.js" defer></script><script src="/assets/js/12.a6b2a896.js" defer></script><script src="/assets/js/3.46699782.js" defer></script><script src="/assets/js/1.c9dccf82.js" defer></script><script src="/assets/js/13.c099488d.js" defer></script>
+  </body>
+</html>
