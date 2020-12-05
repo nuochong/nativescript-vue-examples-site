@@ -6,59 +6,60 @@
     "description": "🍈 NativeScript and Vue code samples.",
     "items": [
         {
+            "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/automatic-nativescript-app-deployments-with-fastlane.html",
+            "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/automatic-nativescript-app-deployments-with-fastlane.html",
+            "title": "快速通道自动部署 NativeScript 应用程序",
+            "date_modified": "2020-12-05T05:40:23.720Z"
+        },
+        {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/adding-objective-c-code-to-a-nativescript-app.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/adding-objective-c-code-to-a-nativescript-app.html",
             "title": "将 Objective-C 代码添加到 NativeScript 应用程序",
+            "summary": "在使用 NativeScript 5.1 之前，您必须创建一个框架并将其包装在插件中才能使用自定义的 Objective-C / Swift 代码。由于这可能是很多不必要的工作（特别是如果您想添加一个小功能），因此我们试图使将 Objective-C 文件直接添加为应用程序资源成为可能。",
             "image": "https://nativescript-vue-examples.luzhaoyang.com/img/blog/adding-objective-c-code-to-a-nativescript-app/drag-js.gif",
-            "date_modified": "2020-12-05T04:46:00.406Z"
+            "date_modified": "2020-12-05T05:40:23.723Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/building-responsive-apps-with-nativescript.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/building-responsive-apps-with-nativescript.html",
             "title": "使用 NativeScript 构建响应式应用程序",
-            "summary": "如果您来自网络世界，则可能熟悉术语“响应式布局”，即适应浏览器大小的布局。但是，本机应用程序并不完全相同。用户可以根据自己的选择调整浏览器的大小，但是应用程序（几乎）将始终占据整个屏幕的大小。屏幕大小有数百种，但是我们可以将其分为两种基本类型：手机和平板电脑。区别不在于屏幕大小本身（有 6.5 英寸的手机和 7 英寸的平板电脑）本身，而是用户与设备交互的方式。例如，人们通常用一只手以纵向模式握住电话，而平板电脑通常以横向模式站立在桌子上。",
-            "date_modified": "2020-12-05T04:46:00.409Z"
+            "summary": "并非每个应用都需要响应。您的应用可能仅针对手机。如果您需要使其具有响应性，那么本文适合您！",
+            "date_modified": "2020-12-05T05:40:23.723Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/client-side-storage-in-nativescript-applications.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/client-side-storage-in-nativescript-applications.html",
             "title": "NativeScript 应用程序中的客户端存储",
             "summary": "两者都有令人难以置信的良好支持。据 CanIUse 称，对网络存储的支持在所有浏览器中的支持率接近 97％，而 IndexedDB 的支持率接近 96％。显然，这些技术都不能替代“真正的”企业级存储服务器，但是它们都通过允许浏览器在页面视图上保留和持久保存数据，在存储数据和提高性能方面都非常有用。",
-            "date_modified": "2020-12-05T04:46:00.410Z"
-        },
-        {
-            "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/automatic-nativescript-app-deployments-with-fastlane.html",
-            "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/automatic-nativescript-app-deployments-with-fastlane.html",
-            "title": "快速通道自动部署 NativeScript 应用程序",
-            "summary": "我们将从安装 fastlane 开始，可以使用以下命令完成该操作：",
-            "date_modified": "2020-12-05T04:46:00.410Z"
+            "date_modified": "2020-12-05T05:40:23.724Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/dependency-versions-in-nativescript-playground.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/dependency-versions-in-nativescript-playground.html",
             "title": "NativeScript Playground 中的依赖项版本",
-            "summary": "如果您对 Playground 的工作方式感兴趣，请查看 NativeScript Playground 的体系结构。",
-            "date_modified": "2020-12-05T04:46:00.410Z"
+            "summary": "请注意，如果您使用多个设备，它们的版本可能会有所不同，并且在不同的设备上可能会看到不同的行为：",
+            "date_modified": "2020-12-05T05:40:23.724Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/detecting-shakes-in-nativescript.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/detecting-shakes-in-nativescript.html",
             "title": "在 NativeScript 中检测震动",
-            "summary": "我们将使用 ShakeDetector 实现。callback 当检测到抖动时，它接受一个被调用，并期望它 onSensorData(data)被来自加速度计的值调用。启动/停止加速度计的更新留给班级的使用者。",
-            "date_modified": "2020-12-05T04:46:00.411Z"
+            "summary": "检测震动\n现在，让我们实现抖动检测。",
+            "date_modified": "2020-12-05T05:40:23.724Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/getting-your-route-on-with-nativescript-vue-episode-one.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/getting-your-route-on-with-nativescript-vue-episode-one.html",
             "title": "使用 NativeScript-Vue 入门：第一集",
-            "summary": "export default {\n    data () {\n        return {\n        };\n    },\n    methods: {\n        goToSecond() {\n            this.$navigateTo(Second)\n        }\n    }\n}\n",
-            "date_modified": "2020-12-05T04:46:00.411Z"
+            "summary": "\n",
+            "date_modified": "2020-12-05T05:40:23.724Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/getting-your-route-on-with-nativescript-vue-episode-two.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/getting-your-route-on-with-nativescript-vue-episode-two.html",
             "title": "使用 NativeScript-Vue 入门：第二集",
-            "date_modified": "2020-12-05T04:46:00.411Z"
+            "summary": "\n",
+            "date_modified": "2020-12-05T05:40:23.724Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/how-to-convince-management-to-use-nativescript-for-mobile-app-development.html",
@@ -66,7 +67,7 @@
             "title": "如何说服管理层使用 NativeScript 进行移动应用开发",
             "summary": "这是 NativeScript 的亮点。借助我们针对 Angular 的内置代码共享策略以及 Vue.js 的新可能性，团队可以从一个共享的 JavaScript 代码库为多个平台进行构建。",
             "image": "https://nativescript-vue-examples.luzhaoyang.com/img/blog/how-to-convince-management-to-use-nativescript-for-mobile-app-development/app-performance.png",
-            "date_modified": "2020-12-05T04:46:00.412Z"
+            "date_modified": "2020-12-05T05:40:23.724Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/language-detection-with-nativescript-and-azure-cognitive-services.html",
@@ -74,7 +75,7 @@
             "title": "使用 NativeScript 和 Azure 认知服务进行语言检测",
             "summary": "\n\n`",
             "image": "https://nativescript-vue-examples.luzhaoyang.com/img/blog/nativescript-azure-text-analytics.gif",
-            "date_modified": "2020-12-05T04:46:00.412Z"
+            "date_modified": "2020-12-05T05:40:23.724Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/listview-radlistview-and-repeater-why-do-i-need-three.html",
@@ -82,72 +83,62 @@
             "title": "ListView，RadListView 和 Repeater-为什么需要三个？",
             "summary": "RadListView是一个插件（nativescript-ui-listview软件包），这意味着您必须在项目中单独安装它。在后台，它以大量的自定义代码构建在本机实现上。如果ListView通过省略两个平台都不具备的功能来提供跨平台 API，则 RadListView方法是使用自定义实现来填补空白。结果是它提供了许多功能，但也变得更加复杂且容易出错。与一样ListView，它提供了您无法关闭的 UI 虚拟化，因此在设计灵活性方面也存在着固有的问题。",
             "image": "https://nativescript-vue-examples.luzhaoyang.com/img/blog/listview-radlistview-and-repeater-why-do-i-need-three/pick-a-thing-list.gif",
-            "date_modified": "2020-12-05T04:46:00.412Z"
+            "date_modified": "2020-12-05T05:40:23.725Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/managing-component-state-in-nativescript-listview.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/managing-component-state-in-nativescript-listview.html",
             "title": "在 NativeScript ListView 中管理组件状态",
             "summary": "在 NativeScript 中，我们利用执行 UI 虚拟化和视图/组件回收的本机控件。这意味着将仅创建可见项目的 UI 元素，并且这些 UI 元素将被回收（或重复使用）以显示新的项目。",
-            "date_modified": "2020-12-05T04:46:00.412Z"
+            "date_modified": "2020-12-05T05:40:23.725Z"
+        },
+        {
+            "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-nativescript-plugins-to-androidx.html",
+            "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-nativescript-plugins-to-androidx.html",
+            "title": "将 NativeScript 插件迁移到 AndroidX",
+            "summary": ":::",
+            "date_modified": "2020-12-05T05:40:23.725Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-cli-hooks-to-nativescript-6.0.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-cli-hooks-to-nativescript-6.0.html",
             "title": "将 CLI 挂钩迁移到 NativeScript 6.0",
             "summary": "以下挂钩将作为之前/之后挂钩执行：",
-            "date_modified": "2020-12-05T04:46:00.413Z"
-        },
-        {
-            "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-nativescript-plugins-to-androidx.html",
-            "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-nativescript-plugins-to-androidx.html",
-            "title": "将 NativeScript 插件迁移到 AndroidX",
-            "summary": "class MyCardView extends supportLib.CardView { ... }\n`",
-            "date_modified": "2020-12-05T04:46:00.413Z"
+            "date_modified": "2020-12-05T05:40:23.725Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/nativescript-6.0-application-migration.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/nativescript-6.0-application-migration.html",
             "title": "迁移到 NativeScript 6.0",
-            "summary": "npm install nativescript-worker-loader@next --save-dev\n`",
-            "date_modified": "2020-12-05T04:46:00.413Z"
+            "summary": "}\n`",
+            "date_modified": "2020-12-05T05:40:23.725Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/nativescript-now-supports-angular-8.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/nativescript-now-supports-angular-8.html",
             "title": "NativeScript 现在支持 Angular 8",
-            "date_modified": "2020-12-05T04:46:00.413Z"
+            "summary": "🔗 -->",
+            "date_modified": "2020-12-05T05:40:23.725Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/offloading-tasks-to-worker-threads-with-nativescript.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/offloading-tasks-to-worker-threads-with-nativescript.html",
             "title": "使用 NativeScript 将任务卸载到辅助线程",
-            "date_modified": "2020-12-05T04:46:00.413Z"
+            "summary": ":::\n关闭线程在my-worker.js与close();（如上图所示）。或使用终止应用程序代码中的线程worker.terminate();。",
+            "date_modified": "2020-12-05T05:40:23.725Z"
         },
         {
             "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/tabs-and-bottomnavigation-nativescripts-two-new-components.html",
             "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/tabs-and-bottomnavigation-nativescripts-two-new-components.html",
             "title": "选项卡和 BottomNavigation-NativeScript 的两个新组件",
-            "date_modified": "2020-12-05T04:46:00.413Z"
+            "summary": "\n\n`",
+            "date_modified": "2020-12-05T05:40:23.725Z"
         },
         {
-            "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/template.html",
-            "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/template.html",
-            "summary": "🔗 -->",
-            "image": "https://nativescript-vue-examples.luzhaoyang.com/img/blog/",
-            "date_modified": "2020-12-05T04:46:00.414Z"
-        },
-        {
-            "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/test.html",
-            "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/test.html",
-            "title": "Title used in feed",
-            "summary": "Description used in feed",
-            "image": "/public/image.png",
-            "date_modified": "2020-12-05T04:46:00.414Z",
-            "author": {
-                "name": "Author",
-                "url": "http://luzhaoyang.com"
-            }
+            "id": "https://nativescript-vue-examples.luzhaoyang.com/blog/the-new-ios-runtime-powered-by-v8.html",
+            "url": "https://nativescript-vue-examples.luzhaoyang.com/blog/the-new-ios-runtime-powered-by-v8.html",
+            "title": "由 V8 提供支持的新 iOS 运行时",
+            "date_modified": "2020-12-05T05:40:23.726Z"
         }
     ]
 }
