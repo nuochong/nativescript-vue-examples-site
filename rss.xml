@@ -4,156 +4,171 @@
         <title>NativeScript-Vue-Examples</title>
         <link>https://nativescript-vue-examples.luzhaoyang.com</link>
         <description>🍈 NativeScript and Vue code samples.</description>
-        <lastBuildDate>Thu, 02 Apr 2020 03:15:28 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 05 Dec 2020 04:46:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://nativescript-vue-examples.luzhaoyang.com/feed.atom" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[将 Objective-C 代码添加到 NativeScript 应用程序]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/adding-objective-c-code-to-a-nativescript-app.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/adding-objective-c-code-to-a-nativescript-app.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <enclosure url="https://nativescript-vue-examples.luzhaoyang.com/img/blog/adding-objective-c-code-to-a-nativescript-app/drag-js.gif">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[使用 NativeScript 构建响应式应用程序]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/building-responsive-apps-with-nativescript.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/building-responsive-apps-with-nativescript.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[如果您来自网络世界，则可能熟悉术语“响应式布局”，即适应浏览器大小的布局。但是，本机应用程序并不完全相同。用户可以根据自己的选择调整浏览器的大小，但是应用程序（几乎）将始终占据整个屏幕的大小。屏幕大小有数百种，但是我们可以将其分为两种基本类型：手机和平板电脑。区别不在于屏幕大小本身（有 6.5 英寸的手机和 7 英寸的平板电脑）本身，而是用户与设备交互的方式。例如，人们通常用一只手以纵向模式握住电话，而平板电脑通常以横向模式站立在桌子上。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[NativeScript 应用程序中的客户端存储]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/client-side-storage-in-nativescript-applications.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/client-side-storage-in-nativescript-applications.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[两者都有令人难以置信的良好支持。据 CanIUse 称，对网络存储的支持在所有浏览器中的支持率接近 97％，而 IndexedDB 的支持率接近 96％。显然，这些技术都不能替代“真正的”企业级存储服务器，但是它们都通过允许浏览器在页面视图上保留和持久保存数据，在存储数据和提高性能方面都非常有用。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[快速通道自动部署 NativeScript 应用程序]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/automatic-nativescript-app-deployments-with-fastlane.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/automatic-nativescript-app-deployments-with-fastlane.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[我们将从安装 fastlane 开始，可以使用以下命令完成该操作：]]></description>
+        </item>
+        <item>
             <title><![CDATA[NativeScript Playground 中的依赖项版本]]></title>
             <link>https://nativescript-vue-examples.luzhaoyang.com/blog/dependency-versions-in-nativescript-playground.html</link>
             <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/dependency-versions-in-nativescript-playground.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[如果您对 Playground 的工作方式感兴趣，请查看 NativeScript Playground 的体系结构。]]></description>
         </item>
         <item>
             <title><![CDATA[在 NativeScript 中检测震动]]></title>
             <link>https://nativescript-vue-examples.luzhaoyang.com/blog/detecting-shakes-in-nativescript.html</link>
             <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/detecting-shakes-in-nativescript.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[我们将使用 ShakeDetector 实现。callback 当检测到抖动时，它接受一个被调用，并期望它 onSensorData(data)被来自加速度计的值调用。启动/停止加速度计的更新留给班级的使用者。]]></description>
         </item>
         <item>
             <title><![CDATA[使用 NativeScript-Vue 入门：第一集]]></title>
             <link>https://nativescript-vue-examples.luzhaoyang.com/blog/getting-your-route-on-with-nativescript-vue-episode-one.html</link>
             <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/getting-your-route-on-with-nativescript-vue-episode-one.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[Vue 路由器...不受支持????！？这意味着什么？我们是否永远只能以单一视图锁定 Vue 应用程序？为什么会这样，我们做了什么使这个可怕的诅咒摆在我们身上？]]></description>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[export default {
+    data () {
+        return {
+        };
+    },
+    methods: {
+        goToSecond() {
+            this.$navigateTo(Second)
+        }
+    }
+}
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[使用 NativeScript-Vue 入门：第二集]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/getting-your-route-on-with-nativescript-vue-episode-two.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/getting-your-route-on-with-nativescript-vue-episode-two.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[如何说服管理层使用 NativeScript 进行移动应用开发]]></title>
             <link>https://nativescript-vue-examples.luzhaoyang.com/blog/how-to-convince-management-to-use-nativescript-for-mobile-app-development.html</link>
             <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/how-to-convince-management-to-use-nativescript-for-mobile-app-development.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[NativeScript 应用程序是真正的本机。这意味着设备上的本机 UI，本机 A​​PI 访问和本机渲染。]]></description>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[这是 NativeScript 的亮点。借助我们针对 Angular 的内置代码共享策略以及 Vue.js 的新可能性，团队可以从一个共享的 JavaScript 代码库为多个平台进行构建。]]></description>
             <enclosure url="https://nativescript-vue-examples.luzhaoyang.com/img/blog/how-to-convince-management-to-use-nativescript-for-mobile-app-development/app-performance.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[将 NativeScript 插件迁移到 AndroidX]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-nativescript-plugins-to-androidx.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-nativescript-plugins-to-androidx.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[让我们看看每种情况下推荐的前进方式。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[NativeScript 现在支持 Angular 8]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/nativescript-now-supports-angular-8.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/nativescript-now-supports-angular-8.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[::: tip
-请查看本文以获取有关 Ivy 的更多信息。
-:::]]></description>
-        </item>
-        <item>
-            <title><![CDATA[使用 NativeScript 将任务卸载到辅助线程]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/offloading-tasks-to-worker-threads-with-nativescript.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/offloading-tasks-to-worker-threads-with-nativescript.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[正如此 NativeScript 演示应用程序所证明的那样，单线程模型在 99％的时间内都很好（因为在 UI 线程上运行所有内容都非常快）：]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Title used in feed]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/test.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/test.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[Description used in feed]]></description>
-            <author>nuo.chong@163.com (Author)</author>
-            <enclosure url="/public/image.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[由 V8 提供支持的新 iOS 运行时]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/the-new-ios-runtime-powered-by-v8.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/the-new-ios-runtime-powered-by-v8.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[NativeScript CLI 6.0 中的更新：默认情况下捆绑工作流，仅 Webpack 和 HMR]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/updates-in-the-nativescript-cli-6.0-bundle-workflow-webpack-only-and-hmr-by-default.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/updates-in-the-nativescript-cli-6.0-bundle-workflow-webpack-only-and-hmr-by-default.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[苹果最高法院的判决对开发商意味着什么]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/what-the-apple-supreme-court-decision-means-for-developers.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/what-the-apple-supreme-court-decision-means-for-developers.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[为了澄清这些问题，在本文中，我们将分解该裁决对您的普通开发人员的意义，该裁决对 iOS 生态系统的影响以及该裁决对移动开发未来的影响。]]></description>
-            <enclosure url="https://nativescript-vue-examples.luzhaoyang.com/img/blog/">
             </enclosure>
         </item>
         <item>
             <title><![CDATA[使用 NativeScript 和 Azure 认知服务进行语言检测]]></title>
             <link>https://nativescript-vue-examples.luzhaoyang.com/blog/language-detection-with-nativescript-and-azure-cognitive-services.html</link>
             <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/language-detection-with-nativescript-and-azure-cognitive-services.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[幸运的是，我们可以向云求助，以轻松解决该问题。特别是 Microsoft Azure。]]></description>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[
+
+`]]></description>
             <enclosure url="https://nativescript-vue-examples.luzhaoyang.com/img/blog/nativescript-azure-text-analytics.gif">
             </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[将 Objective-C 代码添加到 NativeScript 应用程序]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/adding-objective-c-code-to-a-nativescript-app.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/adding-objective-c-code-to-a-nativescript-app.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[CLI 将查找此文件夹，以便将其内容添加到 Xcode 项目中，并编译和链接源文件。]]></description>
-            <enclosure url="https://nativescript-vue-examples.luzhaoyang.com/img/blog/adding-objective-c-code-to-a-nativescript-app/drag-js.gif">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[NativeScript 应用程序中的客户端存储]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/client-side-storage-in-nativescript-applications.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/client-side-storage-in-nativescript-applications.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[两者都有令人难以置信的良好支持。据 CanIUse 称，对网络存储的支持在所有浏览器中的支持率接近 97％，而 IndexedDB 的支持率接近 96％。显然，这些技术都不能替代“真正的”企业级存储服务器，但是它们都通过允许浏览器在页面视图上保留和持久保存数据，在存储数据和提高性能方面都非常有用。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[使用 NativeScript 构建响应式应用程序]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/building-responsive-apps-with-nativescript.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/building-responsive-apps-with-nativescript.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[您需要使用以下命令添加插件：]]></description>
-        </item>
-        <item>
-            <title><![CDATA[使用 NativeScript-Vue 入门：第二集]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/getting-your-route-on-with-nativescript-vue-episode-two.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/getting-your-route-on-with-nativescript-vue-episode-two.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[
-]]></description>
         </item>
         <item>
             <title><![CDATA[ListView，RadListView 和 Repeater-为什么需要三个？]]></title>
             <link>https://nativescript-vue-examples.luzhaoyang.com/blog/listview-radlistview-and-repeater-why-do-i-need-three.html</link>
             <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/listview-radlistview-and-repeater-why-do-i-need-three.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[谁不喜欢一个为您遇到的每一个问题提供解决方案的人？就像瑞士军刀一样，它RadListView提供了您所有喜欢的功能以及更多功能。它甚至具有您无法分辨它们的用途的功能，但是当需要时，您将为它们感到感谢。这RadListView确实是三者中最酷的之一。它使您可以立即创建真正令人惊奇的列表体验。感觉就像黑魔法。可悲的是，黑魔法是有代价的。您知道“万事通，万事通”的说法，但不幸的是，这也确实适用RadListView，主要是在性能上。尽管如此，在当今时代，创造令人敬畏的体验通常比单纯的效率要重要。]]></description>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[RadListView是一个插件（nativescript-ui-listview软件包），这意味着您必须在项目中单独安装它。在后台，它以大量的自定义代码构建在本机实现上。如果ListView通过省略两个平台都不具备的功能来提供跨平台 API，则 RadListView方法是使用自定义实现来填补空白。结果是它提供了许多功能，但也变得更加复杂且容易出错。与一样ListView，它提供了您无法关闭的 UI 虚拟化，因此在设计灵活性方面也存在着固有的问题。]]></description>
             <enclosure url="https://nativescript-vue-examples.luzhaoyang.com/img/blog/listview-radlistview-and-repeater-why-do-i-need-three/pick-a-thing-list.gif">
             </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[将 CLI 挂钩迁移到 NativeScript 6.0]]></title>
-            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-cli-hooks-to-nativescript-6.0.html</link>
-            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-cli-hooks-to-nativescript-6.0.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[NativeScript CLI 中的挂钩机制旨在允许在执行 CLI 的某些特定部分之前和之后执行其他操作。如果返回具体值或 Promise，则该挂钩被视为之前/之后挂钩。]]></description>
         </item>
         <item>
             <title><![CDATA[在 NativeScript ListView 中管理组件状态]]></title>
             <link>https://nativescript-vue-examples.luzhaoyang.com/blog/managing-component-state-in-nativescript-listview.html</link>
             <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/managing-component-state-in-nativescript-listview.html</guid>
-            <pubDate>Thu, 02 Apr 2020 03:15:28 GMT</pubDate>
-            <description><![CDATA[
-
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[在 NativeScript 中，我们利用执行 UI 虚拟化和视图/组件回收的本机控件。这意味着将仅创建可见项目的 UI 元素，并且这些 UI 元素将被回收（或重复使用）以显示新的项目。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[将 CLI 挂钩迁移到 NativeScript 6.0]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-cli-hooks-to-nativescript-6.0.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-cli-hooks-to-nativescript-6.0.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[以下挂钩将作为之前/之后挂钩执行：]]></description>
+        </item>
+        <item>
+            <title><![CDATA[将 NativeScript 插件迁移到 AndroidX]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-nativescript-plugins-to-androidx.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/migrating-nativescript-plugins-to-androidx.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[class MyCardView extends supportLib.CardView { ... }
 `]]></description>
+        </item>
+        <item>
+            <title><![CDATA[迁移到 NativeScript 6.0]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/nativescript-6.0-application-migration.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/nativescript-6.0-application-migration.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[npm install nativescript-worker-loader@next --save-dev
+`]]></description>
+        </item>
+        <item>
+            <title><![CDATA[NativeScript 现在支持 Angular 8]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/nativescript-now-supports-angular-8.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/nativescript-now-supports-angular-8.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[使用 NativeScript 将任务卸载到辅助线程]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/offloading-tasks-to-worker-threads-with-nativescript.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/offloading-tasks-to-worker-threads-with-nativescript.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[选项卡和 BottomNavigation-NativeScript 的两个新组件]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/tabs-and-bottomnavigation-nativescripts-two-new-components.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/tabs-and-bottomnavigation-nativescripts-two-new-components.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/template.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/template.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[🔗 -->]]></description>
+            <enclosure url="https://nativescript-vue-examples.luzhaoyang.com/img/blog/">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Title used in feed]]></title>
+            <link>https://nativescript-vue-examples.luzhaoyang.com/blog/test.html</link>
+            <guid>https://nativescript-vue-examples.luzhaoyang.com/blog/test.html</guid>
+            <pubDate>Sat, 05 Dec 2020 04:46:00 GMT</pubDate>
+            <description><![CDATA[Description used in feed]]></description>
+            <author>nuo.chong@163.com (Author)</author>
+            <enclosure url="/public/image.png">
+            </enclosure>
         </item>
     </channel>
 </rss>
